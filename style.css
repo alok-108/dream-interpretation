@@ -1,0 +1,217 @@
+/* Global Reset and Smooth Styling */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  margin: 0;
+  padding: 4vh 1rem;
+  color: #2c3e50;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.65;
+  transition: background 0.3s ease;
+  background: url('https://i.pinimg.com/originals/e6/27/ec/e627ecd304b3fba523d8a28833193870.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Smooth scrollbar */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #8e44ad;
+  border-radius: 6px;
+}
+body::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+/* Centered Container with Glassmorphism */
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 2.75rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Header with gradient color */
+h1 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: linear-gradient(90deg, #ff6f61, #ff9a8b);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #ff6f61, #ff9a8b);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Textarea with modern and smooth transitions */
+textarea {
+  width: 100%;
+  height: 180px;
+  padding: 1.25rem;
+  font-size: 1.1rem;
+  border: 1px solid #d1d1d1;
+  border-radius: 1rem;
+  background-color: #fdfdff;
+  resize: vertical;
+  transition: 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #8e44ad;
+  box-shadow: 0 0 0 4px rgba(142, 68, 173, 0.15);
+  outline: none;
+}
+
+/* Button with Gradient and Hover Effects */
+button {
+  margin-top: 1.75rem;
+  padding: 0.9rem 2.2rem;
+  font-size: 1rem;
+  border: none;
+  background: linear-gradient(to right, #8e44ad, #3498db);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #9b59b6, #2980b9);
+}
+
+button:focus {
+  outline: 3px solid rgba(142, 68, 173, 0.35);
+}
+
+/* Result Section */
+#results {
+  text-align: left;
+  margin-top: 2.5rem;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+/* Individual Result Box with Dynamic Shadow & Hover */
+.result-box {
+  background: #f7f5ff;
+  border-left: 6px solid #8e44ad;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 10px rgba(142, 68, 173, 0.05);
+}
+
+.result-box:hover {
+  background: #f3ebf8;
+  transform: translateY(-3px);
+}
+
+/* Footer Section */
+footer {
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: #7f8c8d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer .footer-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+footer .footer-image img {
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+footer p {
+  font-size: 1.1rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+footer strong {
+  font-weight: 600;
+}
+
+/* High-Contrast Accessible Styles */
+a {
+  color: #8e44ad;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Mobile and Tablet Adaptations */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  textarea {
+    height: 160px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile and Small Screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  textarea {
+    height: 140px;
+  }
+
+  .footer-image img {
+    max-width: 60px;
+  }
+}
